@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="iskw.tatsuya.device_information" version="0.1.0">
+    <name>DeviceInformation</name>
+    <description>Get some device information as a cordova plugin development training to bridge js with native apis</description>
+    <license>MIT</license>
+    <keywords>device, getter, practice</keywords>
+
+    <js-module src="www/device_information.js" name="DeviceInformation">
+        <clobbers target="device_information" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DeviceInformation">
+                <param name="android-package" value="iskw.tatsuya.device_information.DeviceInformation" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/DeviceInformation.java" target-dir="src/iskw/tatsuya/device_information" />
+     </platform>
+</plugin>
